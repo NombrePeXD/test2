@@ -105,4 +105,3 @@ elseif strl == "me" then
    return Found    
 end
 if enable == true then
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/NombrePeXD/Nombre_peHubXD/main/Source'),true))()
