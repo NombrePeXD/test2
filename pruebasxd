@@ -63,7 +63,7 @@ image.Parent = Frame
 image.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 image.BorderSizePixel = 0
 image.Size = UDim2.new(0, 23, 0, 22)
-image.Image = "rbxassetid://15248033506"
+image.Image = "rbxassetid://87162794"
 
 TextBox.Parent = Frame
 TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -149,7 +149,7 @@ ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ImageLabel.BackgroundTransparency = 1.000
 ImageLabel.Position = UDim2.new(-0.127000004, 0, 0.407999992, 0)
 ImageLabel.Size = UDim2.new(0, 90, 0, 90)
-ImageLabel.Image = "rbxassetid://15248033506"
+ImageLabel.Image = "rbxassetid://87162794"
 
 fr6.Name = "fr6"
 fr6.Parent = ImageLabel
@@ -178,7 +178,7 @@ execute comands FE without filtering!!!
 use the internal gui to execute comands
 Made by Nombre_pe and catserver
 dsc.gg/teamperu
-Version 1.0.0 (ALPHA)"                                                                                                                                                                                                
+Version 1.0.0 (ALPHA)"
 TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_2.TextScaled = true
 TextLabel_2.TextSize = 15.000
