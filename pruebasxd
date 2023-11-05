@@ -178,7 +178,7 @@ execute comands FE without filtering!!!
 use the internal gui to execute comands
 Made by Nombre_pe and catserver
 dsc.gg/teamperu
-Version 1.0.0 (ALPHA)"
+Version 1.0.0 ALPHA"
 TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_2.TextScaled = true
 TextLabel_2.TextSize = 15.000
