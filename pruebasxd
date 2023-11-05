@@ -173,12 +173,7 @@ TextLabel_2.Position = UDim2.new(0.99999994, 0, 0, 0)
 TextLabel_2.Size = UDim2.new(0, 269, 0, 90)
 TextLabel_2.Font = Enum.Font.SourceSansBold
 TextLabel_2.LineHeight = 1.100
-TextLabel_2.Text = "NCTP destructive epik GUI
-execute comands FE without filtering!
-use the internal gui to execute comands
-Made by Nombre_pe and catserver
-dsc.gg/teamperu
-Version ALPHA"
+TextLabel_2.Text = "Project Ligma by Harkinian and Unverified Run scripts live without filthy modules or converting!                                                              Use the external program to execute scripts.                                                                                                                                                                 Status: Injected"
 TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_2.TextScaled = true
 TextLabel_2.TextSize = 15.000
